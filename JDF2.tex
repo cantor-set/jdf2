@@ -10,14 +10,14 @@
 %
 \documentclass[11pt,a4paper,usenames,dvipsnames]{article}
 %
-\usepackage[left=1.5in, right=1.5in, top=1in, bottom=1in]{geometry}
+\usepackage[left=1.5in, right=1.5in, top=1in, bottom=1.5in]{geometry}
 \usepackage{palatino}
 \usepackage{amsmath}
 \usepackage[citestyle=authoryear-ibid,bibstyle=numeric, backend=biber, sorting=nyt]{biblatex}
 
 \usepackage{caption} % For caption spacing
 \usepackage{listings}
-\usepackage{subcaption} % For sub-figures
+%\usepackage{subcaption} % For sub-figures
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage[utf8]{inputenc}
@@ -27,9 +27,28 @@
 \usepackage{hyperref}
 \usepackage[inline]{enumitem} % Horizontal lists
 \usepackage{sectsty,textcase}
+\usepackage{titlesec}
+
+%%%% Title Formating %%%%
+%%%SECTION FORMAT/SPACING
+\titleformat{\section}
+    {\normalfont\Large\bfseries}
+    {\thesection}
+    {8pt}
+    {\MakeTextUppercase}
+
+\titleformat{\subsection}
+    {\normalfont\bfseries}
+    {\thesubsection}
+    {8pt}
+    {}
+    
+\linespread{1.26}
+\setlength{\parskip}{5pt}
+
 
 \addbibresource{sources.bib}
-\sectionfont{\MakeTextUppercase}
+
 \renewcommand*{\nameyeardelim}{\addcomma\addspace} % Adds a comma between the name and the cite
 
 \captionsetup[figure]{font=small,justification=centering, labelfont=bf}
@@ -71,7 +90,7 @@ For Use in CS6460, CS6750, and CS7637
 If your paper requires an abstract, it should be placed at the top of the first page underneath the title block, preceded by the word Abstract in bold italic. An extra 0.5 should be added to both sides. Not all papers require abstracts; only those that would benefit from a high-level summary of the project or its background.
 \end{abstract}
 
-\section{TEXT}
+\section{Text}
 Welcome to Joyner Document Format (JDF) 2.0! JDF\footnote{This is a replica of the JDF document loosely adapted to a Latex version. See \cite{jn2019}} is primarily intended to standardize page lengths while ensuring readability. Note that although you are required to use JDF for all written assignments, we will not perform explicit formatting checks. You should not worry too much about whether your submission conforms to every minute detail; the most important elements are margins, font, font sizes, and approximate line spacing. Use the paragraph styles built into this document. If you do so, you do not need to verify that the style was followed.
 \begin{figure}[H]
 \centering
