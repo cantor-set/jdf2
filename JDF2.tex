@@ -13,7 +13,7 @@
 \usepackage[left=1.5in, right=1.5in, top=1in, bottom=1.5in]{geometry}
 \usepackage{palatino}
 \usepackage{amsmath}
-\usepackage[citestyle=authoryear-ibid,bibstyle=numeric, backend=biber, sorting=nyt]{biblatex}
+\usepackage[citestyle=authoryear-ibid,bibstyle=numeric, backend=biber, sorting=ynt]{biblatex}
 
 \usepackage{caption} % For caption spacing
 \usepackage{listings}
@@ -28,6 +28,9 @@
 \usepackage[inline]{enumitem} % Horizontal lists
 \usepackage{sectsty,textcase}
 \usepackage{titlesec}
+% Tables 
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
 %%%% Title Formating %%%%
 %%%SECTION FORMAT/SPACING
@@ -63,8 +66,6 @@
     urlcolor=NavyBlue,
     citecolor=NavyBlue,
     pdfborderstyle={/S/U/W 1}
-
-    
 }
 
 \renewenvironment{abstract}{%
@@ -76,11 +77,16 @@
 }
 \setlength{\parindent}{0cm} % Remove indentation Default is 15pt.
 
-\title{\LARGE \textbf{Joyner Document Format 2.0:\\
-For Use in CS6460, CS6750, and CS7637
-} }
-\author{Author Name \\ \href{mailto:username@gatech.edu}{username@gatech.edu}}
+\title{\LARGE \textbf{\projectTitle} }
+\author{\authorName \\ \href{mailto:\authorEmail}{\authorEmail}}
 \date{}
+
+%%%%%% Variables %%%%%%%
+\newcommand{\authorName}{Author Name}
+\newcommand{\authorEmail}{username@gatech.edu}
+\newcommand{\projectTitle}{Joyner Document Format 2.0: \\ For Use in CS6460, CS6750, and CS7637}
+
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
 
 \begin{document}
 \clearpage\maketitle
